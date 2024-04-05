@@ -7,7 +7,7 @@ If you find iSeg useful for your work, please consider citing:
 @article{lang2024iseg,
     author  = {Lang, Itai and Xu, Fei and Decatur, Dale and Babu, Sudarshan and Hanocka, Rana},
     title   = {{iSeg: Interactive 3D Segmentation via Interactive Attention}},
-    journal = {arXiv preprint arXiv:2403.00000},
+    journal = {arXiv preprint arXiv:2404.03219},
     year    = {2024}
 }
 ```
