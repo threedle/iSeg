@@ -1,0 +1,7 @@
+data*/
+demo*/
+meshes/
+SAM_repo/model_checkpoints/
+experiments*/
+.vscode/
+*.pyc
