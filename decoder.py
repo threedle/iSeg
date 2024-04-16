@@ -16,7 +16,6 @@ from modules.dataset import DecoderDataset
 from modules.render import save_renders, Renderer
 from modules.click_attention import ClickAttention
 from modules.decoder import Decoder
-from modules.render import Renderer
 
 
 def train_decoder(args):
