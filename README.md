@@ -1,8 +1,6 @@
 # iSeg: Interactive 3D Segmentation via Interactive Attention
 
-[Itai Lang](https://itailang.github.io/)\*, [Fei Xu](https://github.com/FeiXu-spacetime)\*, [Dale Decatur](https://ddecatur.github.io/), [Sudarshan Babu](https://github.com/sudarshan1994), [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/)
-<br>
-\*Equal contribution
+[Itai Lang](https://itailang.github.io/), [Fei Xu](https://github.com/FeiXu-spacetime), [Dale Decatur](https://ddecatur.github.io/), [Sudarshan Babu](https://github.com/sudarshan1994), [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/)
 
 University of Chicago
 
