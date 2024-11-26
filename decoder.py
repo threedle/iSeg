@@ -198,7 +198,10 @@ def save_loss(loss, dir, name=None):
 
 def load_features(args):
     # load features
-    pred_f = torch.load(args.encoder_f_path)
+    if torch.cuda.is_available():
+        pred_f = torch.load(args.encoder_f_path)
+    else:
+        pred_f = torch.load(args.encoder_f_path, map_location=torch.device('cpu'))
     return pred_f
 
 

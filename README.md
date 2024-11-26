@@ -25,6 +25,12 @@ conda create -n iseg python=3.9.18 --yes
 conda activate iseg
 ```
 
+Alternatively, you may create the environment locally inside the `iSeg` folder and activate it as follows:
+```bash
+conda create --prefix ./iseg python=3.9.18 --yes
+conda activate ./iseg
+```
+
 Install the required packages:
 ```bash
 sh ./install_environment.sh
@@ -66,6 +72,20 @@ python decoder.py --mode test --save_dir ./demo/hammer/decoder/ --model_name dec
 For each run, the per-vertex predicted probability (an `npy` file), a mesh colored according to the predicted probabilities (a `ply` file), and rendered views of the colored mesh and the clicked points (a `png` file) will be saved under the folder `./demo/hammer/decoder/`.
 
 Note that you can save the colored mesh with spheres at the clicked points' location by adding the argument `--show_spheres 1` to the commands above.
+
+## Interactive Demo
+Adfer downloading the demo data, you can run an interactive demo as follows:
+```bash
+python interactive.py --save_dir ./demo/hammer/decoder/ --model_name decoder_checkpoint.pth --encoder_f_path ./demo/hammer/encoder/pred_f.pth --obj_path ./meshes/hammer.obj
+```
+
+You can segment the shape interactively by clicking on the shape. You may choose the `Single Click` mode, where each click segments the shape:
+![single](./media/single_click_demo.png)
+
+You may also choose the `Multiple Clicks` mode, where the shape is segmented with multiple clicks:
+![multiple](./media/multiple_clicks_demo.png)
+
+To undo the last click, push on the `Undo` button. To redo the last click, push on the `Redo` button. To reset all clicks selection, push the `Reset` button.
 
 ## Training Instructions
 This section explains how to generate data and train the encoder and decoder of iSeg. These items will be exemplified for the `hammer` mesh.

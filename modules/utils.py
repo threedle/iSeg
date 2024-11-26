@@ -9,10 +9,6 @@ except ModuleNotFoundError:
     print("No module named 'open3d'")
 from plyfile import PlyData
 import copy
-try:
-    import clip
-except ModuleNotFoundError:
-    print("No module named 'clip'")
 import numpy as np
 from torchvision import transforms
 from pathlib import Path
