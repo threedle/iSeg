@@ -377,7 +377,7 @@ if __name__ == '__main__':
     # Load SAM model
     sam_checkpoint = os.path.join('./SAM_repo/model_checkpoints/', "sam_vit_h_4b8939.pth")
     model_type = "vit_h"
-    device = "cuda"
+    device = 'cuda' and torch.cuda.is_available() or 'cpu'
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
     sam.to(device=device)
 

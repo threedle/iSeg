@@ -614,7 +614,7 @@ if __name__ == '__main__':
     parser.add_argument('--overwrite', type=int, default=0)
 
     # Paths and names
-    parser.add_argument('--obj_path', type=str, default='./demo_meshes/hammer.obj') # directory of the mesh object
+    parser.add_argument('--obj_path', type=str, default='./meshes/hammer.obj') # directory of the mesh object
     parser.add_argument('--name', type=str, default='hammer') # mesh name
     parser.add_argument('--decoder_data_dir', type=str, default='./data/hammer/decoder_data') # directory to store the generated 2D data
 
@@ -631,7 +631,7 @@ if __name__ == '__main__':
     # Load SAM model
     sam_checkpoint = os.path.join('./SAM_repo/model_checkpoints/', "sam_vit_h_4b8939.pth")
     model_type = args.SAM
-    device = "cuda"
+    device = 'cuda' and torch.cuda.is_available() or 'cpu'
     sam = sam_model_registry[model_type](checkpoint=sam_checkpoint)
     sam.to(device=device)
 
