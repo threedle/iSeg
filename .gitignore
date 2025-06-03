@@ -1,0 +1,10 @@
+data*/
+demo*/
+iseg*/
+meshes/
+SAM_repo/model_checkpoints/
+experiments*/
+.vscode/
+*.pyc
+.polyscope.ini
+imgui.ini
