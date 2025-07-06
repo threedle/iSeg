@@ -150,10 +150,12 @@ To evaluate the trained decoder, see the instuctions in the [Demo](#demo) sectio
 ## Citation
 If you find iSeg useful for your work, please consider citing:
 ```
-@article{lang2024iseg,
-    author  = {Lang, Itai and Xu, Fei and Decatur, Dale and Babu, Sudarshan and Hanocka, Rana},
-    title   = {{iSeg: Interactive 3D Segmentation via Interactive Attention}},
-    journal = {arXiv preprint arXiv:2404.03219},
-    year    = {2024}
+@InProceedings{lang2024iseg,
+  author    = {Lang, Itai and Xu, Fei and Decatur, Dale and Babu, Sudarshan and Hanocka, Rana},
+  title     = {{iSeg: Interactive 3D Segmentation via Interactive Attention}},
+  booktitle = {SIGGRAPH Asia 2024 Conference Papers},
+  doi       = {10.1145/3680528.3687605},
+  publisher = {Association for Computing Machinery},
+  year      = {2024}
 }
 ```
