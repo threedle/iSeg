@@ -1,11 +1,25 @@
 # iSeg: Interactive 3D Segmentation via Interactive Attention
 
-[Itai Lang](https://itailang.github.io/), [Fei Xu](https://github.com/FeiXu-spacetime), [Dale Decatur](https://ddecatur.github.io/), [Sudarshan Babu](https://github.com/sudarshan1994), [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/)
+[Itai Lang](https://itailang.github.io/)<sup style="font-size: 0.7em;">1</sup>, [Fei Xu](https://github.com/FeiXu-spacetime)<sup style="font-size: 0.7em;">1</sup>, [Dale Decatur](https://ddecatur.github.io/)<sup style="font-size: 0.7em;">1</sup>, [Sudarshan Babu](https://github.com/sudarshan1994)<sup style="font-size: 0.7em;">2</sup>, [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/)<sup style="font-size: 0.7em;">1</sup>
 
-University of Chicago
+&nbsp;&nbsp;
+<span style="position: relative; display: inline-block;">
+  <span style="position: absolute; top: -0.3em; left: -0.8em; font-size: 1em;">1</span>
+  <img src="./media/uchicago_logo.svg" alt="TTIC Logo" width="220">
+</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="position: relative; display: inline-block;">
+  <span style="position: absolute; top: -0.3em; left: -0.9em; font-size: 1em;">2</span>
+  <img src="./media/ttic_logo.png" alt="TTIC Logo" width="150">
+</span>
+
+<br>
 
 <a href="https://threedle.github.io/iSeg/"><img src="https://img.shields.io/website?down_color=lightgrey&down_message=offline&label=Project%20Page&up_color=lightgreen&up_message=online&url=https%3A//threedle.github.io/iSeg/" height=22></a>
-<a href="https://arxiv.org/abs/2404.03219"><img src="https://img.shields.io/badge/arXiv-iSeg-b31b1b.svg" height=22.5></a>
+<a href="https://dl.acm.org/doi/10.1145/3680528.3687605">
+  <img src="https://img.shields.io/badge/Conference-SIGGRAPH%20Asia%202024-61d5fe" height=22>
+</a>
+<a href="https://arxiv.org/abs/2404.03219"><img src="https://img.shields.io/badge/arXiv-iSeg-ff6961.svg" height=22></a>
 
 ![teaser](./media/teaser.png)
 
