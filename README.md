@@ -2,7 +2,7 @@
 
 [Itai Lang](https://itailang.github.io/)<sup style="font-size: 0.7em;">1</sup>, [Fei Xu](https://github.com/FeiXu-spacetime)<sup style="font-size: 0.7em;">1</sup>, [Dale Decatur](https://ddecatur.github.io/)<sup style="font-size: 0.7em;">1</sup>, [Sudarshan Babu](https://github.com/sudarshan1994)<sup style="font-size: 0.7em;">2</sup>, [Rana Hanocka](https://people.cs.uchicago.edu/~ranahanocka/)<sup style="font-size: 0.7em;">1</sup>
 
-&nbsp;&nbsp;
+&nbsp;
 <span style="position: relative; display: inline-block;">
   <span style="position: absolute; top: -0.3em; left: -0.8em; font-size: 1em;">1</span>
   <img src="./media/uchicago_logo.svg" alt="TTIC Logo" width="230">
