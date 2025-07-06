@@ -23,6 +23,13 @@
 
 ![teaser](./media/teaser.png)
 
+<div align="center" style="display: inline-flex; align-items: center; gap: 8px;">
+  <a href="http://www.replicabilitystamp.org#https-github-com-threedle-iseg">
+    <img src="https://www.replicabilitystamp.org/logo/Reproducibility-tiny.png" alt="Replicability Stamp">
+  </a>
+  <span>iSeg has been awarded the GRSI Replicability Stamp.</span>
+</div>
+
 ## Abstract
 We present iSeg, a new interactive technique for segmenting 3D shapes. Previous works have focused mainly on leveraging pre-trained 2D foundation models for 3D segmentation based on text. However, text may be insufficient for accurately describing fine-grained spatial segmentations. Moreover, achieving a consistent 3D segmentation using a 2D model is challenging since occluded areas of the same semantic region may not be visible together from any 2D view. Thus, we design a segmentation method conditioned on fine user clicks, which operates entirely in 3D. Our system accepts user clicks directly on the shape's surface, indicating the inclusion or exclusion of regions from the desired shape partition. To accommodate various click settings, we propose a novel interactive attention module capable of processing different numbers and types of clicks, enabling the training of a single unified interactive segmentation model. We apply iSeg to a myriad of shapes from different domains, demonstrating its versatility and faithfulness to the user's specifications.
 
