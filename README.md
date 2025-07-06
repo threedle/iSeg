@@ -5,12 +5,12 @@
 &nbsp;&nbsp;
 <span style="position: relative; display: inline-block;">
   <span style="position: absolute; top: -0.3em; left: -0.8em; font-size: 1em;">1</span>
-  <img src="./media/uchicago_logo.svg" alt="TTIC Logo" width="220">
+  <img src="./media/uchicago_logo.svg" alt="TTIC Logo" width="230">
 </span>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <span style="position: relative; display: inline-block;">
-  <span style="position: absolute; top: -0.3em; left: -0.9em; font-size: 1em;">2</span>
-  <img src="./media/ttic_logo.png" alt="TTIC Logo" width="150">
+  <span style="position: absolute; top: -0.3em; left: -0.95em; font-size: 1em;">2</span>
+  <img src="./media/ttic_logo.png" alt="TTIC Logo" width="160">
 </span>
 
 <br>
