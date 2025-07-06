@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D. It is highly flexible and produces fine-grained customized segmentations for a variety of shapes from different domains.">
+  <meta name="description"
+    content="iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D. It is highly flexible and produces fine-grained customized segmentations for a variety of shapes from different domains.">
   <meta name="keywords" content="iSeg, Interactive Segmentation, 3D Meshes, Foundation Models">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Meta tags for social media banners !-->
-  <meta property="og:title" content="iSeg: Interactive 3D Segmentation via Interactive Attention"/>
-  <meta property="og:description" content="iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D. It is highly flexible and produces fine-grained customized segmentations for a variety of shapes from different domains."/>
-  <meta property="og:url" content="https://threedle.github.io/iSeg/"/>
+  <meta property="og:title" content="iSeg: Interactive 3D Segmentation via Interactive Attention" />
+  <meta property="og:description"
+    content="iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D. It is highly flexible and produces fine-grained customized segmentations for a variety of shapes from different domains." />
+  <meta property="og:url" content="https://threedle.github.io/iSeg/" />
   <meta property="og:image" content="./static/images/og_banner.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <meta name="twitter:title" content="iSeg: Interactive 3D Segmentation via Interactive Attention">
-  <meta name="twitter:description" content="iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D. It is highly flexible and produces fine-grained customized segmentations for a variety of shapes from different domains.">
+  <meta name="twitter:description"
+    content="iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D. It is highly flexible and produces fine-grained customized segmentations for a variety of shapes from different domains.">
   <meta name="twitter:image" content="./static/images/twitter_banner.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- End of Meta tags for social media banners !-->
-  
+
   <title>iSeg: Interactive 3D Segmentation via Interactive Attention</title>
   <link rel="icon" type="image/x-icon" href="./static/images/iseg_icon.ico">
 
@@ -40,377 +44,402 @@
 </head>
 
 <body>
-<!-- Navigation Bar -->
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://3dl.cs.uchicago.edu/">
-        <span class="threedle-icon"></span>
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
       </a>
     </div>
-  </div>
-</nav>
-<!-- End of Navigation Bar -->
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">iSeg: Interactive 3D Segmentation via Interactive Attention</h1>
-          <h2 class="title is-3 publication-conference">SIGGRAPH Asia 2024</h2>
-          <!-- Paper Authors -->
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <div class="author-portrait">
-                <img src="./static/images/itai.png" class="rgb preload" alt="Itai">
-              </div>
-              <a href="https://itailang.github.io">Itai Lang</a><sup>1</sup>
-            </span>
-            <span class="author-block">
-              <div class="author-portrait">
-                <img src="./static/images/fei.png" class="rgb preload" alt="Fei">
-              </div>
-              <a href="https://astrophysics.uchicago.edu/people/profile/fei-xu/">Fei Xu</a><sup>1</sup>
-            </span>
-            <span class="author-block">
-              <div class="author-portrait">
-                <img src="./static/images/dale.png" class="rgb preload" alt="Dale">
-              </div>
-              <a href="https://ddecatur.github.io/">Dale Decatur</a><sup>1</sup>
-            </span>
-            <span class="author-block">
-              <div class="author-portrait">
-                <img src="./static/images/sudarshan.png" class="rgb preload" alt="Sudarshan">
-              </div>
-              <a href="https://people.cs.uchicago.edu/~sudarshan/">Sudarshan Babu</a><sup>2</sup>
-            </span>
-            <span class="author-block">
-              <div class="author-portrait">
-                <img src="./static/images/rana.png" class="rgb preload" alt="Rana">
-              </div>
-              <a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana Hanocka</a><sup>1</sup>
-            </span>
-          </div>
-          <!-- End of Paper Authors -->
-
-          <!-- Institutions -->
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <sup>1</sup>University of Chicago
-            </span>
-            <span class="author-block">
-              &nbsp;&nbsp;&nbsp;<sup>2</sup>Toyota Technological Institute at Chicago
-            </span>
-          </div>
-          <!-- End of Institutions -->
-		  
-          <!-- Publication Links -->
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- Paper link -->
-              <span class="link-block">
-                <a href="https://arxiv.org/pdf/2404.03219.pdf" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <!-- End of Paper Link -->
-
-              <!-- arXiv abstract Link -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2404.03219" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- End of arXiv abstract Link -->
-
-              <!-- Code Link -->
-              <span class="link-block">
-                <a href="https://github.com/threedle/iSeg"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </a>
-              </span>
-              <!-- End of Code Link -->
-            </div>
-          </div>
-          <!-- End of Publication Links -->
-        </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://3dl.cs.uchicago.edu/">
+          <span class="threedle-icon"></span>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
+  <!-- End of Navigation Bar -->
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+  <section class="hero">
     <div class="hero-body">
-      <video poster="" id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="static/videos/teaser_animation.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D.
-        It accepts both positive and negative clicks directly on the shape's surface, indicating the inclusion or exclusion of regions.
-        iSeg is highly flexible and produces fine-grained customized segmentations for a variety of shapes from different domains.
-      </h2>
-      <div class="has-text-centered" style="margin-top: 1em;">
-        <span style="display: inline-flex; align-items: center; gap: 8px;">
-          <a href="http://www.replicabilitystamp.org#https-github-com-threedle-iseg">
-            <img src="https://www.replicabilitystamp.org/logo/Reproducibility-tiny.png" alt="Replicability Stamp">
-          </a>
-          <span class="subtitle">iSeg has been awarded the GRSI Replicability Stamp.</span>
-        </span>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">iSeg: Interactive 3D Segmentation via Interactive Attention</h1>
+            <h2 class="title is-3 publication-conference">SIGGRAPH Asia 2024</h2>
+            <!-- Paper Authors -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img src="./static/images/itai.png" class="rgb preload" alt="Itai">
+                </div>
+                <a href="https://itailang.github.io">Itai Lang</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img src="./static/images/fei.png" class="rgb preload" alt="Fei">
+                </div>
+                <a href="https://astrophysics.uchicago.edu/people/profile/fei-xu/">Fei Xu</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img src="./static/images/dale.png" class="rgb preload" alt="Dale">
+                </div>
+                <a href="https://ddecatur.github.io/">Dale Decatur</a><sup>1</sup>
+              </span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img src="./static/images/sudarshan.png" class="rgb preload" alt="Sudarshan">
+                </div>
+                <a href="https://people.cs.uchicago.edu/~sudarshan/">Sudarshan Babu</a><sup>2</sup>
+              </span>
+              <span class="author-block">
+                <div class="author-portrait">
+                  <img src="./static/images/rana.png" class="rgb preload" alt="Rana">
+                </div>
+                <a href="https://people.cs.uchicago.edu/~ranahanocka/">Rana Hanocka</a><sup>1</sup>
+              </span>
+            </div>
+            <!-- End of Paper Authors -->
+
+            <!-- Institutions -->
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>University of Chicago
+              </span>
+              <span class="author-block">
+                &nbsp;&nbsp;&nbsp;<sup>2</sup>Toyota Technological Institute at Chicago
+              </span>
+            </div>
+            <!-- End of Institutions -->
+
+            <!-- Publication Links -->
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2404.03219.pdf" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- End of Paper Link -->
+
+                <!-- arXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2404.03219" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- End of arXiv abstract Link -->
+
+                <!-- Code Link -->
+                <span class="link-block">
+                  <a href="https://github.com/threedle/iSeg" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- End of Code Link -->
+              </div>
+            </div>
+            <!-- End of Publication Links -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End of teaser video -->
+  </section>
 
-<!-- Results carousel -->
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-lamp-positive">
-          <video poster="" id="lamp-positive" autoplay muted loop playsinline height="100%">
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="static/videos/teaser_animation.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          iSeg is an interactive segmentation technique for 3D shapes operating entirely in 3D.
+          It accepts both positive and negative clicks directly on the shape's surface, indicating the inclusion or
+          exclusion of regions.
+          iSeg is highly flexible and produces fine-grained customized segmentations for a variety of shapes from
+          different domains.
+        </h2>
+        <div class="has-text-centered" style="margin-top: 1em;">
+          <span style="display: inline-flex; align-items: center; gap: 8px;">
+            <a href="http://www.replicabilitystamp.org#https-github-com-threedle-iseg">
+              <img src="https://www.replicabilitystamp.org/logo/Reproducibility-tiny.png" alt="Replicability Stamp">
+            </a>
+            <span class="subtitle">iSeg has been awarded the GRSI Replicability Stamp.</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of teaser video -->
+
+  <!-- Results carousel -->
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-lamp-positive">
+            <video poster="" id="lamp-positive" autoplay muted loop playsinline height="100%">
               <source src="./static/videos/lamp_positive.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Single positive click</p>
-        </div>
-        <div class="item item-bike-positive">
-          <video poster="" id="bike-positive" autoplay muted loop playsinline height="100%">
+            </video>
+            <p class="has-text-centered">Single positive click</p>
+          </div>
+          <div class="item item-bike-positive">
+            <video poster="" id="bike-positive" autoplay muted loop playsinline height="100%">
               <source src="./static/videos/bike_positive.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Single positive click</p>
-        </div>
-        <div class="item item-alien-positive">
-          <video poster="" id="alien-positive" autoplay muted loop playsinline height="100%">
+            </video>
+            <p class="has-text-centered">Single positive click</p>
+          </div>
+          <div class="item item-alien-positive">
+            <video poster="" id="alien-positive" autoplay muted loop playsinline height="100%">
               <source src="./static/videos/alien_positive.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Single positive click</p>
-        </div>
-        <div class="item item-camel-positive">
-          <video poster="" id="camel-positive" autoplay muted loop playsinline height="100%">
+            </video>
+            <p class="has-text-centered">Single positive click</p>
+          </div>
+          <div class="item item-camel-positive">
+            <video poster="" id="camel-positive" autoplay muted loop playsinline height="100%">
               <source src="./static/videos/camel_positive.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Single positive click</p>
-        </div>
-        <div class="item item-guitar-positive">
+            </video>
+            <p class="has-text-centered">Single positive click</p>
+          </div>
+          <div class="item item-guitar-positive">
             <video poster="" id="guitar-positive" autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/guitar_positive.mp4" type="video/mp4">
+              <source src="./static/videos/guitar_positive.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered">Single positive click</p>
-        </div>
-        <div class="item item-guitar-positive-positive">
-          <video poster="" id="guitar-positive-positive" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/guitar_positive_positive.mp4" type="video/mp4">
-          </video>
-          <p class="has-text-centered">Second positive click</p>
-        </div>
-        <div class="item item-hammer-positive">
+          </div>
+          <div class="item item-guitar-positive-positive">
+            <video poster="" id="guitar-positive-positive" autoplay muted loop playsinline height="100%">
+              <source src="./static/videos/guitar_positive_positive.mp4" type="video/mp4">
+            </video>
+            <p class="has-text-centered">Second positive click</p>
+          </div>
+          <div class="item item-hammer-positive">
             <video poster="" id="hammer-positive" autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/hammer_positive.mp4" type="video/mp4">
+              <source src="./static/videos/hammer_positive.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered">Single positive click</p>
-        </div>
-        <div class="item item-hammer-positive-negative">
+          </div>
+          <div class="item item-hammer-positive-negative">
             <video poster="" id="hammer-positive-negative" autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/hammer_positive_negative.mp4" type="video/mp4">
+              <source src="./static/videos/hammer_positive_negative.mp4" type="video/mp4">
             </video>
             <p class="has-text-centered">Second negative click</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End of results carousel -->
+  </section>
+  <!-- End of results carousel -->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present iSeg, a new interactive technique for segmenting 3D shapes. Previous works have focused mainly on leveraging pre-trained
-            2D foundation models for 3D segmentation based on text. However, text may be insufficient for accurately describing fine-grained spatial
-            segmentations. Moreover, achieving a consistent 3D segmentation using a 2D model is challenging since occluded areas of the same semantic
-            region may not be visible together from any 2D view. Thus, we design a segmentation method conditioned on fine user clicks, which
-            operates entirely in 3D. Our system accepts user clicks directly on the shape's surface, indicating the inclusion or exclusion of
-            regions from the desired shape partition. To accommodate various click settings, we propose a novel interactive attention module capable
-            of processing different numbers and types of clicks, enabling the training of a single unified interactive segmentation model. We apply
-            iSeg to a myriad of shapes from different domains, demonstrating its versatility and faithfulness to the user's specifications.
-          </p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We present iSeg, a new interactive technique for segmenting 3D shapes. Previous works have focused mainly
+              on leveraging pre-trained
+              2D foundation models for 3D segmentation based on text. However, text may be insufficient for accurately
+              describing fine-grained spatial
+              segmentations. Moreover, achieving a consistent 3D segmentation using a 2D model is challenging since
+              occluded areas of the same semantic
+              region may not be visible together from any 2D view. Thus, we design a segmentation method conditioned on
+              fine user clicks, which
+              operates entirely in 3D. Our system accepts user clicks directly on the shape's surface, indicating the
+              inclusion or exclusion of
+              regions from the desired shape partition. To accommodate various click settings, we propose a novel
+              interactive attention module capable
+              of processing different numbers and types of clicks, enabling the training of a single unified interactive
+              segmentation model. We apply
+              iSeg to a myriad of shapes from different domains, demonstrating its versatility and faithfulness to the
+              user's specifications.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <!--/ end of Abstract -->
+      <!--/ end of Abstract -->
 
-    <!-- Method Overview-->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <hr class="divider" />
-        <h2 class="title is-3">Method Overview</h2>
-        <div class="content has-text-justified">
-          <p>
-            iSeg includes two parts: an encoder that maps vertex coordinates to a deep semantic vector, denoted as Mesh Feature Field (MFF),
-            and a decoder that takes the MFF and user clicks and predicts the corresponding mesh segment. The decoder contains an interactive
-            attention layer supporting a variable number and type (both positive and negative) of clicks. We leverage the pre-trained 2D segmentation
-            model <a href="https://openaccess.thecvf.com/content/ICCV2023/html/Kirillov_Segment_Anything_ICCV_2023_paper.html">Segment Anything</a>
-            to supervise our training with 2D segmentation masks using rendered images of the shape and the 2D projection of the 3D clicks. Although
-            iSeg is trained using noisy and inconsistent 2D segmentations, it is view-consistent by construction.
-          </p>
-        </div>
-        <div class="two-col-image">
-          <img src="./static/images/method.png" type="image/png">
+      <!-- Method Overview-->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <hr class="divider" />
+          <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+            <p>
+              iSeg includes two parts: an encoder that maps vertex coordinates to a deep semantic vector, denoted as
+              Mesh Feature Field (MFF),
+              and a decoder that takes the MFF and user clicks and predicts the corresponding mesh segment. The decoder
+              contains an interactive
+              attention layer supporting a variable number and type (both positive and negative) of clicks. We leverage
+              the pre-trained 2D segmentation
+              model <a
+                href="https://openaccess.thecvf.com/content/ICCV2023/html/Kirillov_Segment_Anything_ICCV_2023_paper.html">Segment
+                Anything</a>
+              to supervise our training with 2D segmentation masks using rendered images of the shape and the 2D
+              projection of the 3D clicks. Although
+              iSeg is trained using noisy and inconsistent 2D segmentations, it is view-consistent by construction.
+            </p>
+          </div>
+          <div class="two-col-image">
+            <img src="./static/images/method.png" type="image/png">
+          </div>
         </div>
       </div>
-    </div>
-    <!-- End of Method Overview-->
+      <!-- End of Method Overview-->
 
-    <!-- Interactive Attention -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <hr class="divider" />
-        <h2 class="title is-3">Interactive Attention</h2>
-        <div class="content has-text-justified">
-          <p>
-            We propose a novel interactive attention mechanism, accommodating variable numbers and types of clicks, positive and negative. Our attention layer
-            learns the clicks' representation and computes their interaction with the mesh vertices. This key element in our method enables a unified decoder
-            architecture supporting various settings of user clicks.
-          </p>
-        </div>
-        <div class="one-col-image">
-          <img src="./static/images/attention.png" type="image/png">
-        </div>
-      </div>
-    </div>
-    <!-- End of Interactive Attention -->
-    
-    <!-- Native 3D Segmentation -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <hr class="divider" />
-        <h2 class="title is-3">Native 3D Segmentation</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our method segments parts in a 3D-consistent manner, regardless of whether the surface is occluded from the point click (left). Furthermore,
-            we may input two point clicks occluded from each other (right). This supervision does not exist for our model training, since occluded 3D
-            surfaces cannot be seen together from <i>any single 2D view</i>.
-          </p>
-        </div>
-        <div class="one-col-image">
-          <img src="./static/images/view.png" type="image/png">
+      <!-- Interactive Attention -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <hr class="divider" />
+          <h2 class="title is-3">Interactive Attention</h2>
+          <div class="content has-text-justified">
+            <p>
+              We propose a novel interactive attention mechanism, accommodating variable numbers and types of clicks,
+              positive and negative. Our attention layer
+              learns the clicks' representation and computes their interaction with the mesh vertices. This key element
+              in our method enables a unified decoder
+              architecture supporting various settings of user clicks.
+            </p>
+          </div>
+          <div class="one-col-image">
+            <img src="./static/images/attention.png" type="image/png">
+          </div>
         </div>
       </div>
-    </div>
-    <!-- End of Native 3D Segmentation -->
+      <!-- End of Interactive Attention -->
 
-    <!-- 3D Consistency -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <hr class="divider" />
-        <h2 class="title is-3">3D Consistency</h2>
-        <div class="content has-text-justified">
-          <p>
-            The Segment Anything model (SAM) is highly sensitive to the viewing angle. For the same clicked 3D point, it may generate substantially
-            different 2D segmentation masks that are inconsistent in 3D, depending on the view direction. By contrast, iSeg segments the shape directly
-            in 3D and is 3D consistent by construction.
-          </p>
-        </div>
-        <div class="one-col-image">
-          <img src="./static/images/consistency.png" type="image/png">
-        </div>
-      </div>
-    </div>
-    <!-- End of 3D Consistency -->
-
-    <!-- Cross-Domain Segmentation -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <hr class="divider" />
-        <h2 class="title is-3">Cross-Domain Segmentation</h2>
-        <div class="content has-text-justified">
-          <p>
-            iSeg optimizes a condition-agnostic feature field, capable of transferring between shapes. The feature vector of a point click
-            of one mesh (left) is used to segment the same shape (middle) as well as <i>another</i> shape from a <i>different</i> domain (right).
-          </p>
-        </div>
-        <div class="one-col-image">
-          <img src="./static/images/cross.png" type="image/png">
+      <!-- Native 3D Segmentation -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <hr class="divider" />
+          <h2 class="title is-3">Native 3D Segmentation</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our method segments parts in a 3D-consistent manner, regardless of whether the surface is occluded from
+              the point click (left). Furthermore,
+              we may input two point clicks occluded from each other (right). This supervision does not exist for our
+              model training, since occluded 3D
+              surfaces cannot be seen together from <i>any single 2D view</i>.
+            </p>
+          </div>
+          <div class="one-col-image">
+            <img src="./static/images/view.png" type="image/png">
+          </div>
         </div>
       </div>
-    </div>
-    <!-- End of Cross-Domain Segmentation -->
+      <!-- End of Native 3D Segmentation -->
 
-    <!-- Local Geometric Edits -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <hr class="divider" />
-        <h2 class="title is-3">Local Geometric Edits</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our localized and contiguous segmentations enable various shape edits, such as deleting or selecting the segmented region,
-            shrinking it, or extruding it along the surface normal.
-          </p>
-        </div>
-        <div class="two-col-image">
-          <img src="./static/images/edits.png" type="image/png">
+      <!-- 3D Consistency -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <hr class="divider" />
+          <h2 class="title is-3">3D Consistency</h2>
+          <div class="content has-text-justified">
+            <p>
+              The Segment Anything model (SAM) is highly sensitive to the viewing angle. For the same clicked 3D point,
+              it may generate substantially
+              different 2D segmentation masks that are inconsistent in 3D, depending on the view direction. By contrast,
+              iSeg segments the shape directly
+              in 3D and is 3D consistent by construction.
+            </p>
+          </div>
+          <div class="one-col-image">
+            <img src="./static/images/consistency.png" type="image/png">
+          </div>
         </div>
       </div>
-    </div>
-    <!-- End of Local Geometric Edits -->
+      <!-- End of 3D Consistency -->
 
-    <!-- Gallery -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <hr class="divider" />
-        <h2 class="title is-3">Gallery</h2>
-        <div class="content has-text-justified">
-          <p>
-            iSeg produces fine-grained segmentations from a single or couple of clicks (both positive and negative) as input. It is highly flexible
-            and is able to select parts that vary in size, geometry, and semantic meaning.
-          </p>
+      <!-- Cross-Domain Segmentation -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <hr class="divider" />
+          <h2 class="title is-3">Cross-Domain Segmentation</h2>
+          <div class="content has-text-justified">
+            <p>
+              iSeg optimizes a condition-agnostic feature field, capable of transferring between shapes. The feature
+              vector of a point click
+              of one mesh (left) is used to segment the same shape (middle) as well as <i>another</i> shape from a
+              <i>different</i> domain (right).
+            </p>
+          </div>
+          <div class="one-col-image">
+            <img src="./static/images/cross.png" type="image/png">
+          </div>
         </div>
-        <div class="two-col-image">
-          <img src="./static/images/single.png" type="image/png">
+      </div>
+      <!-- End of Cross-Domain Segmentation -->
+
+      <!-- Local Geometric Edits -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <hr class="divider" />
+          <h2 class="title is-3">Local Geometric Edits</h2>
+          <div class="content has-text-justified">
+            <p>
+              Our localized and contiguous segmentations enable various shape edits, such as deleting or selecting the
+              segmented region,
+              shrinking it, or extruding it along the surface normal.
+            </p>
+          </div>
+          <div class="two-col-image">
+            <img src="./static/images/edits.png" type="image/png">
+          </div>
         </div>
+      </div>
+      <!-- End of Local Geometric Edits -->
+
+      <!-- Gallery -->
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <hr class="divider" />
+          <h2 class="title is-3">Gallery</h2>
+          <div class="content has-text-justified">
+            <p>
+              iSeg produces fine-grained segmentations from a single or couple of clicks (both positive and negative) as
+              input. It is highly flexible
+              and is able to select parts that vary in size, geometry, and semantic meaning.
+            </p>
+          </div>
+          <div class="two-col-image">
+            <img src="./static/images/single.png" type="image/png">
+          </div>
           <p>
             <br>
           </p>
-        <div class="two-col-image">
-          <img src="./static/images/couple.png" type="image/png">
+          <div class="two-col-image">
+            <img src="./static/images/couple.png" type="image/png">
+          </div>
         </div>
       </div>
+      <!-- End of Gallery -->
     </div>
-    <!-- End of Gallery -->
-  </div>
-</section>
+  </section>
 
-<!--BibTex -->
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@InProceedings{lang2024iseg,
+  <!--BibTex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@InProceedings{lang2024iseg,
   author    = {Lang, Itai and Xu, Fei and Decatur, Dale and Babu, Sudarshan and Hanocka, Rana},
   title     = {{iSeg: Interactive 3D Segmentation via Interactive Attention}},
   booktitle = {SIGGRAPH Asia 2024 Conference Papers},
@@ -418,33 +447,37 @@
   publisher = {Association for Computing Machinery},
   year      = {2024}
 }</code></pre>
-  </div>
-</section>
-<!-- End of BibTex -->
-
-<!-- footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link" href="https://github.com/threedle/iSeg" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
     </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            Parts of the code for this website are reused from the <a href="https://github.com/nerfies/nerfies.github.io">source code</a> contributed by the authors of <a href="https://nerfies.github.io/">Nerfies</a>.
-          </p>
+  </section>
+  <!-- End of BibTex -->
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <a class="icon-link" href="https://github.com/threedle/iSeg" class="external-link" disabled>
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Parts of the code for this website are reused from the <a
+                href="https://github.com/nerfies/nerfies.github.io">source code</a> contributed by the authors of <a
+                href="https://nerfies.github.io/">Nerfies</a>.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
-<!-- End of footer -->
+  </footer>
+  <!-- End of footer -->
 </body>
+
 </html>
