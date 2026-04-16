@@ -57,12 +57,12 @@ Install the required packages:
 sh ./install_environment.sh
 ```
 
-Note: the installation assumes a machine with GPU and CUDA.
+Note: the installation assumes a machine with a GPU and CUDA.
 
 ## Demo
 This demo shows how to run a pre-trained iSeg model for interactive segmentation of a `hammer` mesh.
 
-Downlod the demo data:
+Download the demo data:
 ```bash
 bash download_demo_data.sh
 ```
@@ -95,7 +95,7 @@ For each run, the per-vertex predicted probability (an `npy` file), a mesh color
 Note that you can save the colored mesh with spheres at the clicked points' location by adding the argument `--show_spheres 1` to the commands above.
 
 ## Interactive Demo
-Adfer downloading the demo data, you can run an interactive demo as follows:
+After downloading the demo data, you can run an interactive demo as follows:
 ```bash
 python interactive.py --save_dir ./demo/hammer/decoder/ --model_name decoder_checkpoint.pth --encoder_f_path ./demo/hammer/encoder/pred_f.pth --obj_path ./meshes/hammer.obj
 ```
@@ -106,7 +106,7 @@ You can segment the shape interactively by clicking on the shape. You may choose
 You may also choose the `Multiple Clicks` mode, where the shape is segmented with multiple clicks:
 ![multiple](./media/multiple_clicks_demo.png)
 
-To undo the last click, push on the `Undo` button. To redo the last click, push on the `Redo` button. To reset all clicks selection, push the `Reset` button.
+To undo the last click, push on the `Undo` button. To redo the last click, push on the `Redo` button. To reset all click selections, push the `Reset` button.
 
 ## Training Instructions
 This section explains how to generate data and train the encoder and decoder of iSeg. These items will be exemplified for the `hammer` mesh.
@@ -127,7 +127,7 @@ python encoder.py --obj_path ./meshes/hammer.obj --name hammer --encoder_data_di
 
 The predicted encoder features per mesh vertex will be saved to `./experiments/hammer/encoder/pred_f.pth`. These features will be used during the decoder training.
 
-Generate data for training the decoder (single click and couple of clicks):
+Generate data for training the decoder (single click and a couple of clicks):
 ```bash
 python data_generation.py --name hammer --obj_path ./meshes/hammer.obj --decoder_data_dir ./data/hammer/decoder_data --single_click 1 --second_positive 1 --second_negative 1
 ```
@@ -145,7 +145,7 @@ If you generated only single click data, set the arguments `--use_positive_click
 
 The decoder model will be saved to `./experiments/hammer/decoder/decoder/decoder_checkpoint.pth`
 
-To evaluate the trained decoder, see the instuctions in the [Demo](#demo) section.
+To evaluate the trained decoder, see the instructions in the [Demo](#demo) section.
 
 ## Citation
 If you find iSeg useful for your work, please consider citing:
